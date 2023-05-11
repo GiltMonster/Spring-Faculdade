@@ -3,7 +3,6 @@ package br.senac.sp.projetoInicial.Faculdade.entities;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity(name = "Alunos")

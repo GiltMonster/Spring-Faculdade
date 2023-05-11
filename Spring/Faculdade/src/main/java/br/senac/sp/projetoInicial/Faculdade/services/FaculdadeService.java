@@ -38,4 +38,23 @@ public class FaculdadeService {
         return aluno.orElse(null);
     }
 
+    public Aluno gravarAluno(Aluno aluno) {
+        return alunoRepository.save(aluno);
+    }
+
+    public void deletar(Integer ra) {
+        alunoRepository.deleteById(ra);
+    }
+
+    public Aluno updateAluno(Integer ra, Aluno aluno) {
+        Aluno alterado = findById(ra);
+        if (alterado != null) {
+            alterado.setNome(aluno.getNome());
+            alterado.setDataCadastro(aluno.getDataCadastro());
+            alterado.setAtivo(aluno.isAtivo());
+            return alunoRepository.save(alterado);
+        }
+        return null;
+    }
+
 }
