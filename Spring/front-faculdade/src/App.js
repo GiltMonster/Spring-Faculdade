@@ -1,4 +1,3 @@
-import {useState } from 'react';
 import './App.css';
 import Formulario from './components/Formulario';
 import Tabela from './components/Tabela';
@@ -10,17 +9,9 @@ import Nav from './components/Nav';
 
 function App() {
 
-  const [alunos, setAlunos] = useState([]);
 
-  function carregar() {
-    fetch("http://localhost:8080/faculdade/listar")
-      .then(res => res.json())
-      .then(data => setAlunos(data))
-
-  }
 
   return (
-    alunos ?
       <div>
         <div className="App">
           <div className="container">
@@ -38,11 +29,7 @@ function App() {
         </div>
       </div>
 
-      :
-      <div className="spinner-grow text-primary" role="status">
-        <span className="visually-hidden">Loading...</span>
-      </div>
-
+     
   );
 }
 
