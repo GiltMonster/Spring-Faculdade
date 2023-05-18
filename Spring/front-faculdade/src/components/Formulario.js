@@ -27,19 +27,19 @@ function Formulario() {
     return (
         <>
 
-            <form method="POST">
+            <form>
                 <div className="mb-3">
                     <h1>Cadastro:</h1>
                     <input type="text" className="form-control my-2" placeholder="Nome:"  ref={nomeRef}/>
                     <input type="date" className="form-control my-2" placeholder="Data do cadastro:" ref={dataRef}/>
                 </div>
 
-                <div className="form-check mb-3" >
+                {/* <div className="form-check mb-3" >
                     <input type="checkbox" className="form-check-input" id="check" ref={ativoRef}/>
                     <label className="form-check-label" htmlFor="check">Ativo?</label>
-                </div>
+                </div> */}
 
-                <input className="col-12 btn btn-success mx-1" value={"Salvar"}  onClick={salvar}/>
+                <input type="submit" className="col-12 btn btn-success mx-1" value={"Salvar"}  onClick={salvar}/>
             </form>
         </>
     );

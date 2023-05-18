@@ -21,10 +21,10 @@ function App() {
 
           <Routes>
             <Route path="/" index element={<Formulario/>}/>
-            <Route path="/listar" element={<Tabela />} />
-            <Route path="/excluir" element={<Excluir />} />
-            <Route path="/pesquisar" element={<Pesquisar />} />
-            <Route path="/*" element={<NotFound />} />
+            <Route path="/listar" element={<Tabela/>} />
+            <Route path="/excluir" element={<Excluir/>} />
+            <Route path="/pesquisar" element={<Pesquisar/>} />
+            <Route path="/*" element={<NotFound/>} />
           </Routes>
         </div>
       </div>
